@@ -31,7 +31,7 @@ export class GraphQLServer {
   subscriptionServer: SubscriptionServer | null
   options: Options = {
     tracing: { mode: 'http-header' },
-    port: process.env.PORT ? parseInt(process.env.PORT, 10) : 4000,
+    port: process.env.PORT || 4000,
     endpoint: '/',
     subscriptions: '/',
     playground: '/',
