@@ -3,20 +3,12 @@
   "version": "0.0.0-semantic-release",
   "main": "dist/src/index.js",
   "typings": "./dist/src/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/graphcool/graphql-yoga.git"
   },
-  "keywords": [
-    "graphql",
-    "server",
-    "api",
-    "graphql-server",
-    "apollo"
-  ],
+  "keywords": ["graphql", "server", "api", "graphql-server", "apollo"],
   "author": "Johannes Schickling <johannes@graph.cool>",
   "license": "MIT",
   "bugs": {
@@ -24,9 +16,11 @@
   },
   "homepage": "https://github.com/graphcool/graphql-yoga",
   "scripts": {
+    "prepare": "npm run build",
     "prepublish": "npm run build",
     "build": "rm -rf dist && tsc -d",
-    "lint": "tslint --project tsconfig.json {src,test}/**/*.ts && prettier-check --ignore-path .gitignore {src,.}/{*.ts,*.js}",
+    "lint":
+      "tslint --project tsconfig.json {src,test}/**/*.ts && prettier-check --ignore-path .gitignore {src,.}/{*.ts,*.js}",
     "format": "prettier --write --ignore-path .gitignore {src,.}/{*.ts,*.js}",
     "test": "npm run lint && npm run build"
   },
